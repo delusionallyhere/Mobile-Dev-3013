@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Color Picker</string>
+    <string name="red_text">Red</string>
+    <string name="green_text">Green</string>
+    <string name="blue_text">Blue</string>
+    <string name="red_text_number">0</string>
+    <string name="green_text_number">0</string>
+    <string name="blue_text_number">0</string>
+    <string name="colorHint">0-255</string>
+
+</resources>
