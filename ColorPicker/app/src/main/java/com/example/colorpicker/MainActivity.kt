@@ -15,14 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*redNumberView.addTextChangedListener(object: TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                if
-            }
-        })*/
-
-
-
         redSeekBar.max = 255
         redSeekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
             override fun onStartTrackingTouch(seekBar: SeekBar?) { }
@@ -32,6 +24,13 @@ class MainActivity : AppCompatActivity() {
                 redNumberView.setText(redSeekBar.progress.toString())
                 colorPreview.setBackgroundColor(Color.parseColor(colorStr))
             }
+        })
+        redNumberView.addTextChangedListener(object: TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                redSeekBar.progress = redNumberView.text.toString().toInt()
+            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { }
         })
 
         greenSeekBar.max = 255
@@ -44,6 +43,13 @@ class MainActivity : AppCompatActivity() {
                 colorPreview.setBackgroundColor(Color.parseColor(colorStr))
             }
         })
+        greenNumberView.addTextChangedListener(object: TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                greenSeekBar.progress = greenNumberView.text.toString().toInt()
+            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { }
+        })
 
         blueSeekBar.max = 255
         blueSeekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
@@ -54,6 +60,13 @@ class MainActivity : AppCompatActivity() {
                 blueNumberView.setText(greenSeekBar.progress.toString())
                 colorPreview.setBackgroundColor(Color.parseColor(colorStr))
             }
+        })
+        blueNumberView.addTextChangedListener(object: TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                blueSeekBar.progress = blueNumberView.text.toString().toInt()
+            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { }
         })
     }
 
