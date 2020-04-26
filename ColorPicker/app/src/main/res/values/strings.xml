@@ -7,5 +7,12 @@
     <string name="green_text_number">0</string>
     <string name="blue_text_number">0</string>
     <string name="colorHint">0-255</string>
+    <string name="saveAction">Save</string>
+    <string name="loadAction">Load</string>
+    <string name="settings">Settings</string>
+    <string name="colorName">Color Name</string>
+    <string name="colorValue">Color Value</string>
+    <string name="sendButton">Send</string>
+    <string name="nameHint">Enter a color name.</string>
 
 </resources>

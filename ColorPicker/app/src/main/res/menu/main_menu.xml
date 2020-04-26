@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/sendButton"
+        android:title="@string/sendButton"
+        android:icon="@drawable/ic_send_black_24dp"
+        app:showAsAction="always">
+
+    </item>
+    <item
+        android:id="@+id/saveColor"
+        android:title="@string/saveAction"
+        android:icon="@drawable/ic_save_black_24dp"
+        app:showAsAction="ifRoom" >
+
+    </item>
+
+    <item
+        android:id="@+id/loadColor"
+        android:title="@string/loadAction"
+        android:icon="@drawable/ic_file_upload_black_24dp"
+        app:showAsAction="ifRoom" >
+
+    </item>
+
+    <item
+        android:id="@+id/settingsAction"
+        android:title="@string/settings"
+        app:showAsAction="never" >
+
+    </item>
+
+</menu>

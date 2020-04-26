@@ -8,5 +8,6 @@
     <color name="red_seek_bar">#FF0000</color>
     <color name="green_seek_bar">#00FF00</color>
     <color name="blue_seek_bar">#0000FF</color>
+    <color name="backgroundTint">#027F8F</color>
 
 </resources>
