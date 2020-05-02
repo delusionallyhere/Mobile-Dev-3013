@@ -77,12 +77,12 @@ class MainActivity : AppCompatActivity() {
                 cb!!.setStyle(ChalkBoard.MOVE_ROTATE_RECOLOR)
                 return true
             }
-            teleport -> {
-                cb!!.setStyle(ChalkBoard.TELEPORT)
+            blink -> {
+                cb!!.setStyle(ChalkBoard.BLINK)
                 return true
             }
-            shrink -> {
-                cb!!.setStyle(ChalkBoard.SHRINK)
+            grow_height -> {
+                cb!!.setStyle(ChalkBoard.GROW_HEIGHT)
                 return true
             }
             load_color -> {

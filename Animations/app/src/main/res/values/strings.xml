@@ -11,7 +11,7 @@
     <string name="color_anim">Animate Color Change</string>
     <string name="movecolor_anim">Move and Recolor</string>
     <string name="moverotatecolor_anim">Move and Rotate, Then Color</string>
-    <string name="teleport">Teleport</string>
-    <string name="shrink">Shrink</string>
+    <string name="blink">Blink</string>
+    <string name="grow_height">Grow Height</string>
     <string name="load_color">Load Color</string>
 </resources>

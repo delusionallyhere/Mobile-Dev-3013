@@ -59,14 +59,14 @@
         android:title="@string/moverotatecolor_anim"
         app:showAsAction="never" />
     <item
-        android:id="@+id/teleport"
+        android:id="@+id/blink"
         android:orderInCategory="63"
-        android:title="@string/teleport"
+        android:title="@string/blink"
         app:showAsAction="never" />
     <item
-        android:id="@+id/shrink"
+        android:id="@+id/grow_height"
         android:orderInCategory="64"
-        android:title="@string/shrink"
+        android:title="@string/grow_height"
         app:showAsAction="never" />
 
     <item

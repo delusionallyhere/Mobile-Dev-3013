@@ -9,6 +9,7 @@ import android.graphics.Point
 import android.view.View
 import android.view.WindowManager
 import android.view.animation.AccelerateInterpolator
+import android.view.animation.Animation
 import android.view.animation.BounceInterpolator
 import android.view.animation.DecelerateInterpolator
 
@@ -137,32 +138,20 @@ class ChalkBoard//Constructor - initialize this View
                 atOnce.play(recolorguy).after(moveguy)
                 atOnce.start()
             }
-            TELEPORT -> {
-                val mover = getObjectAnimator(100, "fraction", 0.0f, 1.0f)
-                val fadeOut = ObjectAnimator.ofFloat(this, ALPHA, 1f, 0f).apply {
-                    duration = 800
-                }
-                val fadeIn = ObjectAnimator.ofFloat(this, ALPHA, 0f, 1f).apply {
-                    duration = 1200
-                }
-                val andThen = AnimatorSet()
-                andThen.playSequentially(fadeOut, mover, fadeIn)
-                andThen.start()
+            BLINK -> {
+                anim = ObjectAnimator.ofFloat(this, ALPHA, 1f, 0f).apply{ duration = 800 }
+                anim.repeatMode = ObjectAnimator.REVERSE
+                anim.repeatCount = 11
+                anim.start()
             }
 
-            SHRINK -> {
-                val mover = getObjectAnimator(20, "fraction", 0.0f, 1.0f)
-                val shrinkH = getObjectAnimator(550, "scaleY", 1.0f, 0.01f)
-                val shrinkW = getObjectAnimator(500, "scaleX", 1.0f, 0.01f)
-                val enlargeH = getObjectAnimator(550, "scaleY", 0.01f, 1.0f)
-                val enlargeW = getObjectAnimator(500, "scaleX", 0.01f, 1.0f)
-                val animationSet = AnimatorSet()
-                val animSubSet1 = AnimatorSet()
-                val animSubSet2 = AnimatorSet()
-                animSubSet1.playTogether(shrinkH, shrinkW)
-                animSubSet2.playTogether(enlargeH, enlargeW)
-                animationSet.playSequentially(animSubSet1,mover, animSubSet2)
-                animationSet.start()
+            GROW_HEIGHT -> {
+                val mover = getObjectAnimator(100, "fraction", 0.0f, 1.0f)
+                val shrinkH = getObjectAnimator(550, "scaleY", 2.75f, 1.0f)
+                val growH = getObjectAnimator(550, "scaleY", 1.0f, 2.75f)
+                val growHeight = AnimatorSet()
+                growHeight.playSequentially(growH, mover, shrinkH)
+                growHeight.start()
             }
             else -> {
             }
@@ -259,8 +248,8 @@ class ChalkBoard//Constructor - initialize this View
         const val DECELERATE = 3  //Constant to indicate decelerate-at-end movement animation
         const val BOUNCE = 4  //Constant to indicate bounce-at-end movement animation
         const val ROTATE = 5  //Constant to indicate rotate around View center animation
-        const val TELEPORT = 6        // Constant to indicate the teleport animation
-        const val SHRINK = 7        // constant to indicate the shrink animation
+        const val BLINK = 6        // Constant to indicate the blink animation
+        const val GROW_HEIGHT = 7        // constant to indicate the shrink animation
         const val MOVE_ROTATE = 9  //Constant to indicate move and rotate simultaneously animation
         const val COLOR_ACC = 11  //Constant to indicate transition color animation
         const val MOVE_RECOLOR = 12  //Constant to indicate move and change color simultaneously
