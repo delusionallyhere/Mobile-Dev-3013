@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+
+    <string name="intro_screen">Intro Screen</string>
+    <string name="tellMe_intro">Tell me how you feel.</string>
+    <string name="tellMe_continue">Pick an option.</string>
+    <string name="happy">Happy</string>
+    <string name="hungry">Hungry</string>
+    <string name="mad">Mad</string>
+    <string name="pressContinue">Press any where to continue.</string>
+    <string name="sad">Sad</string>
+    <string name="tired">Tired</string>
+
+
+    <string name="happy_dance">Do you have a happy dance?!</string>
+
+    <string name="hungry_question">Are you feeling hungry?</string>
+    <string name="snack_meal">Do you want a snack or meal?</string>
+
+    <string name="mad_question">Are you feeling upset or mad?</string>
+    <string name="mad_advice">Breath and use your words please.</string>
+
+    <string name="sad_question">Are you feeling sad?</string>
+    <string name="hug_question">Do you want a hug?</string>
+
+    <string name="tired_question">Are you tired?</string>
+    <string name="tired_suggestions">Do you want to lay down or snuggle?</string>
+
+    <string name="send_button">Send</string>
+    <string name="settings">Settings</string>
+</resources>

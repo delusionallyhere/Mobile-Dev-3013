@@ -420,22 +420,21 @@ class MainActivity : AppCompatActivity() {
             val msg = ByteArray(255) //arbitrary size
             try {
                 inSt = socket.inputStream
-                nBytes = inSt.read(msg)
-                Log.i(TSERVER, "\nServer Received $nBytes \n")
             } catch (ioe: IOException) {
                 Log.e(TSERVER, "IOException when opening inputStream\n $ioe")
                 return
             }
 
             try {
+                nBytes = inSt.read(msg)
+                Log.i(TSERVER, "\nServer Received $nBytes \n")
                 val msgString = msg.toString(Charsets.UTF_8)
                 Log.i(TSERVER, "\nServer Received  $nBytes, Bytes:  [$msgString]\n")
                 runOnUiThread { echoMsg("\nReceived $nBytes:  [$msgString]\n") }
             } catch (uee: UnsupportedEncodingException) {
-                Log.e(TSERVER,
-                    "UnsupportedEncodingException when converting bytes to String\n $uee")
+                Log.e(TSERVER, "UnsupportedEncodingException when converting bytes to String\n $uee")
             } finally {
-                cancel()        //for this App - close() after 1 (or no) message received
+                //cancel()        //for this App - close() after 1 (or no) message received
             }
         }
 
@@ -462,4 +461,46 @@ class MainActivity : AppCompatActivity() {
         private const val LOG_TAG = "--Talker----"
     }
 }
+
+
+/*    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val flashButton = findViewById<Button>(R.id.flashButton)
+        val beepButton = findViewById<Button>(R.id.beepButton)
+        val shakeButton = findViewById<Button>(R.id.shakeButton)
+        val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
+        val cameraID = cameraManager.cameraIdList[0]
+        val tone = ToneGenerator(AudioManager.STREAM_MUSIC, 100)
+
+        var flashOn = false
+
+        flashButton.setOnClickListener {
+            if(!flashOn) {
+                flashOn = true
+                cameraManager.setTorchMode(cameraID, true)
+            }
+            else {
+                flashOn = false
+                cameraManager.setTorchMode(cameraID, false)
+            }
+        }
+
+        beepButton.setOnClickListener {
+            tone.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 500)
+        }
+
+        shakeButton.setOnClickListener {
+            val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            if (Build.VERSION.SDK_INT >= 26) {
+                vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE))
+            }
+            else {
+                vibrator.vibrate(300)
+            }
+        }
+    }
+}
+*/
 
