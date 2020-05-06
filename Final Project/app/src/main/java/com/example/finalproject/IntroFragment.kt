@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.mad_fragment.view.*
+import kotlinx.android.synthetic.main.intro_screen.view.*
 
-class MadFragment: Fragment() {
+class IntroFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) : View? {
-        return inflater.inflate(R.layout.mad_fragment, container, false)
+        return  inflater.inflate(R.layout.intro_screen, container, false)
     }
+
 }

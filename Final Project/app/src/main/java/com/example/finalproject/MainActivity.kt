@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -19,11 +20,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         setSupportActionBar(findViewById(R.id.toolbar))
-        //supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setLogo(R.drawable.app_icon)
         supportActionBar?.setDisplayUseLogoEnabled(true)
     }
-
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == R.id.sendButton) {
-            val sendIntent = Intent().apply{
+            val sendIntent = Intent().apply {
                 action = ACTION_COLOR
                 type = "text/plain"
                 this.putExtra("Request Code", COLOR_REQUEST_CODE)
@@ -43,8 +43,7 @@ class MainActivity : AppCompatActivity() {
                 startActivityForResult(sendIntent, COLOR_REQUEST_CODE)
                 onActivityResult(COLOR_REQUEST_CODE, Activity.RESULT_OK, sendIntent)
             }
-        }
-        else
+        } else
             Toast.makeText(this, "Oh no", Toast.LENGTH_SHORT).show()
 
         return super.onOptionsItemSelected(item)
@@ -71,10 +70,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun changeColor(red: Int, green: Int, blue: Int) {
-        currentColor =
+        //currentColor =
     }
-    fun changeFragment(newFragmentId: Int) {
-        when(newFragmentId) {
+
+    fun changeFragment(view: View) {
+        when (view.id) {
             R.id.happyButton -> {supportFragmentManager.beginTransaction().replace(R.id.fragmentContent, HappyFragment()).commit()}
             R.id.hungryButton -> {supportFragmentManager.beginTransaction().replace(R.id.fragmentContent, HungryFragment()).commit()}
             R.id.madButton -> {supportFragmentManager.beginTransaction().replace(R.id.fragmentContent, MadFragment()).commit()}
@@ -83,3 +83,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
