@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">FinalProject</string>
+    <string name="app_name">Final Project</string>
 
+    <string name="click_screen"> times screen was touched.</string>
     <string name="intro_screen">Intro Screen</string>
     <string name="tellMe_intro">Tell me how you feel.</string>
     <string name="tellMe_continue">Pick an option.</string>
@@ -8,7 +9,9 @@
     <string name="hungry">Hungry</string>
     <string name="mad">Mad</string>
     <string name="pressContinue">Press any where to continue.</string>
+    <string name="run">Run</string>
     <string name="sad">Sad</string>
+    <string name="steps"> steps.</string>
     <string name="tired">Tired</string>
 
 
@@ -19,6 +22,9 @@
 
     <string name="mad_question">Are you feeling upset or mad?</string>
     <string name="mad_advice">Breath and use your words please.</string>
+
+    <string name="run_question">How fast can you run?!?</string>
+    <string name="go">GO!!</string>
 
     <string name="sad_question">Are you feeling sad?</string>
     <string name="hug_question">Do you want a hug?</string>

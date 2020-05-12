@@ -3,53 +3,50 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/happyLayout"
+    android:id="@+id/runLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="changeFragment"
-    android:background="@color/happyBackground">
+    android:background="@color/colorAccent"
+    >
 
     <ImageView
-        android:id="@+id/happyView"
-        android:layout_width="304dp"
-        android:layout_height="591dp"
-        android:contentDescription="@string/happy"
+        android:id="@+id/runView"
+        android:layout_width="359dp"
+        android:layout_height="696dp"
+        android:layout_marginBottom="36dp"
+        android:contentDescription="@string/run"
         android:onClick="changeFragment"
-        android:rotation="270"
-        android:scaleType="centerInside"
+        android:rotation="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/happy_image" />
+        app:srcCompat="@drawable/run_image" />
 
     <TextView
-        android:id="@+id/happyDance"
+        android:id="@+id/runQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="serif-monospace"
-        android:text="@string/happy_dance"
-        android:textColor="@color/colorPrimary"
+        android:text="@string/run_question"
+        android:textColor="@color/hungryBackground"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/runView" />
 
     <TextView
-        android:id="@+id/happyContinue"
+        android:id="@+id/goText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="460dp"
         android:fontFamily="serif-monospace"
-        android:text="@string/pressContinue"
-        android:textColor="@color/colorAccent"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/go"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/happyView" />
-
+        app:layout_constraintTop_toBottomOf="@+id/runQuestion" />
 </androidx.constraintlayout.widget.ConstraintLayout>

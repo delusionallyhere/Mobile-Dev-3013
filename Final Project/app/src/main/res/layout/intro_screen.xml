@@ -113,4 +113,60 @@
         app:layout_constraintTop_toBottomOf="@+id/introText"
         app:layout_constraintVertical_bias="0.132" />
 
+    <TextView
+        android:id="@+id/clickCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="serif-monospace"
+        android:text=""
+        android:textColor="@color/happyBackground"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/continueText"
+        app:layout_constraintEnd_toStartOf="@+id/click"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiredButton"
+        app:layout_constraintVertical_bias="0.982" />
+
+    <TextView
+        android:id="@+id/click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="serif-monospace"
+        android:text="@string/click_screen"
+        android:textColor="@color/happyBackground"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/continueText"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="serif-monospace"
+        android:text="@string/steps"
+        android:textColor="@color/happyBackground"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/continueText"
+        app:layout_constraintEnd_toStartOf="@+id/clickCount"
+        app:layout_constraintHorizontal_bias="0.718"
+         app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/stepCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="serif-monospace"
+        android:text=""
+        android:textColor="@color/happyBackground"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/continueText"
+        app:layout_constraintEnd_toStartOf="@+id/steps"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

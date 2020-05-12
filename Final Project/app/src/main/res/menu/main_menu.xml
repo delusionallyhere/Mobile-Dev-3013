@@ -6,7 +6,7 @@
     <item
         android:id="@+id/sendButton"
         android:title="@string/send_button"
-        android:icon="@drawable/ic_file_upload_black_24dp"
+        android:icon="@drawable/ic_send_black_24dp"
         app:showAsAction="ifRoom">
     </item>
 

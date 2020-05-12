@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tiredLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="changeFragment"
     android:background="@color/tiredBackground">
 
     <TextView
@@ -25,6 +28,7 @@
         android:layout_width="361dp"
         android:layout_height="662dp"
         android:contentDescription="@string/tired"
+        android:onClick="changeFragment"
         android:rotation="90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="152dp"
+        android:fontFamily="serif-monospace"
         android:text="@string/tired_suggestions"
         android:textColor="@color/happyBackground"
         android:textSize="18sp"

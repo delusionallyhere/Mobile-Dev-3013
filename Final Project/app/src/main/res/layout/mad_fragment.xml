@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/madLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="changeFragment"
     android:background="@color/madBackground">
 
     <ImageView
         android:id="@+id/madView"
         android:layout_width="348dp"
         android:layout_height="693dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="80dp"
         android:contentDescription="@string/mad"
+        android:onClick="changeFragment"
         android:rotation="90"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +28,7 @@
         android:id="@+id/madQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="serif-monospace"
         android:text="@string/mad_question"
         android:textColor="@color/happyBackground"
